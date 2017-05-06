@@ -10,7 +10,7 @@ Scene* StageScene::createScene()
     auto stageLayer = StageScene::create();
     stageLayer->setPhysicsWorld(scene->getPhysicsWorld());
     scene->addChild(stageLayer);
-    stageLayer->toggleDebug();
+    //stageLayer->toggleDebug();
     
     return scene;
 }
