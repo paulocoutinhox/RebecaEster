@@ -50,12 +50,15 @@ Character* Character::create(const std::string &type)
     
     character->setSprite(Sprite::createWithSpriteFrameName("characters/" + type + "/idle_1.png"));
     character->showIdleAnimation(true);
+    //character->showAttackAnimation(true);
+    //character->showWalkAnimation(true);
+    //character->showRunAnimation(true);
     
-    float characterWidth = character->getSprite()->getContentSize().width;
-    float characterHeight = character->getSprite()->getContentSize().height;
+    character->setState(1);
+    character->setDirection(2);
     
     // physics
-    auto physicsBody = PhysicsBody::createBox(Size(characterWidth, characterHeight), PhysicsMaterial(0, 1, 0));
+    auto physicsBody = PhysicsBody::createBox(Size(60, 90), PhysicsMaterial(1, 0, 1));
     physicsBody->setRotationEnable(false);
     character->setPhysicsBody(physicsBody);
     character->getSprite()->addComponent(character->getPhysicsBody());
@@ -135,6 +138,11 @@ void Character::setDeadAnimate(Animate *animate)
 
 void Character::showIdleAnimation(const bool &repeat)
 {
+    if (state == 1)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(idleAnimate));
@@ -143,10 +151,17 @@ void Character::showIdleAnimation(const bool &repeat)
     {
         sprite->runAction(idleAnimate);
     }
+    
+    state = 1;
 }
 
 void Character::showWalkAnimation(const bool &repeat)
 {
+    if (state == 2)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(walkAnimate));
@@ -155,10 +170,17 @@ void Character::showWalkAnimation(const bool &repeat)
     {
         sprite->runAction(walkAnimate);
     }
+    
+    state = 2;
 }
 
 void Character::showRunAnimation(const bool &repeat)
 {
+    if (state == 3)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(runAnimate));
@@ -167,10 +189,17 @@ void Character::showRunAnimation(const bool &repeat)
     {
         sprite->runAction(runAnimate);
     }
+    
+    state = 3;
 }
 
 void Character::showAttackAnimation(const bool &repeat)
 {
+    if (state == 4)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(attackAnimate));
@@ -179,10 +208,17 @@ void Character::showAttackAnimation(const bool &repeat)
     {
         sprite->runAction(attackAnimate);
     }
+    
+    state = 4;
 }
 
 void Character::showJumpAnimation(const bool &repeat)
 {
+    if (state == 5)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(jumpAnimate));
@@ -191,10 +227,17 @@ void Character::showJumpAnimation(const bool &repeat)
     {
         sprite->runAction(jumpAnimate);
     }
+    
+    state = 5;
 }
 
 void Character::showDeadAnimation(const bool &repeat)
 {
+    if (state == 6)
+    {
+        return;
+    }
+    
     if (repeat)
     {
         sprite->runAction(RepeatForever::create(deadAnimate));
@@ -203,6 +246,8 @@ void Character::showDeadAnimation(const bool &repeat)
     {
         sprite->runAction(deadAnimate);
     }
+    
+    state = 6;
 }
 
 PhysicsBody* Character::getPhysicsBody()
@@ -213,4 +258,84 @@ PhysicsBody* Character::getPhysicsBody()
 void Character::setPhysicsBody(PhysicsBody *physicsBody)
 {
     this->physicsBody = physicsBody;
+}
+
+void Character::updateVelocity(Point velocity)
+{
+    move(velocity);
+}
+
+void Character::move(Point velocity)
+{
+    if (velocity.x > 0)
+    {
+        // move right
+        showRunAnimation(true);
+        changeDirection(2);
+        getPhysicsBody()->applyImpulse(Vec2(0.25, 0.0f));
+    }
+    else if (velocity.x < 0)
+    {
+        // move left
+        showRunAnimation(true);
+        changeDirection(1);
+        
+        getPhysicsBody()->applyImpulse(Vec2(-0.25, 0.0f));
+    }
+    else
+    {
+        // not moving
+        showIdleAnimation(true);
+    }
+}
+
+void Character::actionButtonPressed(int button)
+{
+    if (button == 1)
+    {
+        getPhysicsBody()->applyImpulse(Vec2(0.0f, 25.0f));
+        showJumpAnimation(false);
+    }
+}
+
+void Character::changeDirection(int direction)
+{
+    if (this->direction != direction && direction == 1)
+    {
+        sprite->setFlippedX(true);
+        this->direction = direction;
+        
+        if (state == 2 || state == 3)
+        {
+            stopMoving();
+        }
+    }
+    else if (this->direction != direction && direction == 2)
+    {
+        sprite->setFlippedX(false);
+        this->direction = direction;
+     
+        if (state == 2 || state == 3)
+        {
+            stopMoving();
+        }
+    }
+}
+
+void Character::stopMoving()
+{
+    if (state == 2)
+    {
+        getPhysicsBody()->setVelocity(Vec2(0, 0));
+    }
+}
+
+void Character::setState(int state)
+{
+    this->state = state;
+}
+
+void Character::setDirection(int direction)
+{
+    this->direction = direction;
 }

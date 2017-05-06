@@ -26,6 +26,8 @@ public:
     void setJumpAnimate(Animate *animate);
     void setDeadAnimate(Animate *animate);
     void setPhysicsBody(PhysicsBody *physicsBody);
+    void setState(int state);
+    void setDirection(int direction);
     
     void showIdleAnimation(const bool &repeat);
     void showWalkAnimation(const bool &repeat);
@@ -34,15 +36,26 @@ public:
     void showJumpAnimation(const bool &repeat);
     void showDeadAnimation(const bool &repeat);
     
+    void updateVelocity(Point velocity);
+    void move(Point velocity);
+    void actionButtonPressed(int button);
+    void changeDirection(int direction);
+    void stopMoving();
+    
 private:
-    Sprite *sprite;
     Animate *idleAnimate;
     Animate *walkAnimate;
     Animate *runAnimate;
     Animate *attackAnimate;
     Animate *jumpAnimate;
     Animate *deadAnimate;
+    
+    Sprite *sprite;
     PhysicsBody *physicsBody;
+    
+    int direction;
+    int state;
+    
 };
 
 #endif // __CHARACTER_H__

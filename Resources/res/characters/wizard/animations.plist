@@ -7,7 +7,7 @@
 		<key>idle</key>
 		<dict>
 			<key>delay</key>
-			<real>0.4</real>
+			<integer>1</integer>
 			<key>frames</key>
 			<array>
 				<string>characters/wizard/idle_1.png</string>
