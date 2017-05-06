@@ -49,13 +49,13 @@ bool StageScene::init()
     this->addChild(bottomNode);
      */
     
-    /*
+    
     auto physicsBodyTest = PhysicsBody::createBox(Size(40, 40));
     auto physicsBodyTestNode = Sprite::create("CloseNormal.png");
     physicsBodyTestNode->addComponent(physicsBodyTest);
     addChild(physicsBodyTestNode);
     physicsBodyTestNode->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
-     */
+     
     
     scheduleUpdate();
     
