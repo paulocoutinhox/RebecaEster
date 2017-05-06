@@ -8,6 +8,12 @@ Rebeca & Ester
 Small example using cocos2d-x 3.X
 
 
+CURRENT BUG
+===========
+
+https://www.youtube.com/watch?v=IUmoi1v1RzQ&feature=youtu.be
+
+
 Credits
 ================
 
