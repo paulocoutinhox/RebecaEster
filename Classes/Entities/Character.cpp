@@ -48,13 +48,16 @@ Character* Character::create(const std::string &type)
         character->setDeadAnimate(Animate::create(animation));
     }
     
-    character->setSprite(Sprite::create());
+    character->setSprite(Sprite::createWithSpriteFrameName("characters/" + type + "/idle_1.png"));
+    character->showIdleAnimation(true);
+    
+    float characterWidth = character->getSprite()->getContentSize().width;
+    float characterHeight = character->getSprite()->getContentSize().height;
     
     // physics
-    auto playerPhysicsBody = PhysicsBody::createBox(Size(100.0f, 100.0f), PhysicsMaterial(10, 1.0f, 0.5f), Vec2(0.0f, 0.0f));
-    playerPhysicsBody->setRotationEnable(false);
-    playerPhysicsBody->setContactTestBitmask(0xFFFFFFFF);
-    character->setPhysicsBody(playerPhysicsBody);
+    auto physicsBody = PhysicsBody::createBox(Size(characterWidth, characterHeight), PhysicsMaterial(0, 1, 0));
+    physicsBody->setRotationEnable(false);
+    character->setPhysicsBody(physicsBody);
     character->getSprite()->addComponent(character->getPhysicsBody());
     
     return character;

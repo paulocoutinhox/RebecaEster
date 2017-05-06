@@ -4,430 +4,430 @@
 	<dict>
 	<key>frames</key>
         <dict>
-		<key>characters&#x2F;wizard&#x2F;attack_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;attack_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{699,0},{618,391}}</string>
+            		<string>{{135,0},{121,74}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{0,1}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{618,391}}</string>
+            		<string>{{1,3},{124,78}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{618,391}</string>
+            		<string>{121,74}</string>
 			<key>spriteSize</key>
-			<string>{618,391}</string>
+			<string>{124,78}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;attack_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;attack_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,0},{699,418}}</string>
+            		<string>{{0,0},{135,83}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{2,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{699,418}}</string>
+            		<string>{{0,0},{140,84}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{699,418}</string>
+            		<string>{135,83}</string>
 			<key>spriteSize</key>
-			<string>{699,418}</string>
+			<string>{140,84}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;dead_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;dead_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,418},{417,397}}</string>
+            		<string>{{0,83},{79,58}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,397}}</string>
+            		<string>{{2,5},{83,68}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,397}</string>
+            		<string>{79,58}</string>
 			<key>spriteSize</key>
-			<string>{417,397}</string>
+			<string>{83,68}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;hurt_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;hurt_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{417,418},{417,397}}</string>
+            		<string>{{79,83},{79,58}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{0,1}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,397}}</string>
+            		<string>{{2,8},{83,72}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,397}</string>
+            		<string>{79,58}</string>
 			<key>spriteSize</key>
-			<string>{417,397}</string>
+			<string>{83,72}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;hurt_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;jump_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{834,418},{417,397}}</string>
+            		<string>{{0,141},{77,63}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,397}}</string>
+            		<string>{{4,3},{83,70}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,397}</string>
+            		<string>{77,63}</string>
 			<key>spriteSize</key>
-			<string>{417,397}</string>
+			<string>{83,70}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;hurt_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;jump_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,815},{417,361}}</string>
+            		<string>{{77,141},{76,63}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,361}}</string>
+            		<string>{{5,4},{83,70}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,361}</string>
+            		<string>{76,63}</string>
 			<key>spriteSize</key>
-			<string>{417,361}</string>
+			<string>{83,70}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;dead_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;dead_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{417,815},{417,339}}</string>
+            		<string>{{256,0},{74,75}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,2}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,339}}</string>
+            		<string>{{6,0},{83,79}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,339}</string>
+            		<string>{74,75}</string>
 			<key>spriteSize</key>
-			<string>{417,339}</string>
+			<string>{83,79}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;dead_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;hurt_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{834,815},{417,339}}</string>
+            		<string>{{256,75},{73,75}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{3,2}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{417,339}}</string>
+            		<string>{{8,0},{83,79}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{417,339}</string>
+            		<string>{73,75}</string>
 			<key>spriteSize</key>
-			<string>{417,339}</string>
+			<string>{83,79}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;jump_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;hurt_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1317,0},{413,348}}</string>
+            		<string>{{0,204},{73,75}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{3,2}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{413,348}}</string>
+            		<string>{{8,0},{83,79}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{413,348}</string>
+            		<string>{73,75}</string>
 			<key>spriteSize</key>
-			<string>{413,348}</string>
+			<string>{83,79}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;jump_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;jump_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1317,348},{413,348}}</string>
+            		<string>{{73,204},{59,74}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{413,348}}</string>
+            		<string>{{1,1},{62,76}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{413,348}</string>
+            		<string>{59,74}</string>
 			<key>spriteSize</key>
-			<string>{413,348}</string>
+			<string>{62,76}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;attack_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;attack_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1317,696},{402,343}}</string>
+            		<string>{{132,204},{73,68}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{402,343}}</string>
+            		<string>{{5,0},{80,69}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{402,343}</string>
+            		<string>{73,68}</string>
 			<key>spriteSize</key>
-			<string>{402,343}</string>
+			<string>{80,69}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;run_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;run_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,1176},{398,375}}</string>
+            		<string>{{205,204},{73,67}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{0,1}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{398,375}}</string>
+            		<string>{{4,3},{80,75}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{398,375}</string>
+            		<string>{73,67}</string>
 			<key>spriteSize</key>
-			<string>{398,375}</string>
+			<string>{80,75}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;dead_4.png</key>
+            	<key>characters&#x2F;wizard&#x2F;dead_4.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,1911},{343,222}}</string>
+            		<string>{{256,150},{62,36}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{343,222}}</string>
+            		<string>{{5,4},{69,44}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{343,222}</string>
+            		<string>{62,36}</string>
 			<key>spriteSize</key>
-			<string>{343,222}</string>
+			<string>{69,44}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;run_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;dead_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{796,1176},{398,375}}</string>
+            		<string>{{330,67},{72,60}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,1}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{398,375}}</string>
+            		<string>{{7,3},{83,68}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{398,375}</string>
+            		<string>{72,60}</string>
 			<key>spriteSize</key>
-			<string>{398,375}</string>
+			<string>{83,68}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;run_4.png</key>
+            	<key>characters&#x2F;wizard&#x2F;walk_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1194,1176},{398,375}}</string>
+            		<string>{{330,127},{62,71}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{398,375}}</string>
+            		<string>{{3,0},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{398,375}</string>
+            		<string>{62,71}</string>
 			<key>spriteSize</key>
-			<string>{398,375}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;jump_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;walk_4.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1730,0},{312,381}}</string>
+            		<string>{{330,198},{62,71}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{312,381}}</string>
+            		<string>{{4,0},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{312,381}</string>
+            		<string>{62,71}</string>
 			<key>spriteSize</key>
-			<string>{312,381}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;idle_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;idle_2.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{0,1551},{342,360}}</string>
+            		<string>{{0,279},{66,70}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,360}}</string>
+            		<string>{{1,1},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,360}</string>
+            		<string>{66,70}</string>
 			<key>spriteSize</key>
-			<string>{342,360}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;walk_1.png</key>
+            	<key>characters&#x2F;wizard&#x2F;idle_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{342,1551},{342,360}}</string>
+            		<string>{{66,279},{62,70}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{2,1}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,360}}</string>
+            		<string>{{5,0},{68,72}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,360}</string>
+            		<string>{62,70}</string>
 			<key>spriteSize</key>
-			<string>{342,360}</string>
+			<string>{68,72}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;walk_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;idle_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{684,1551},{342,354}}</string>
+            		<string>{{128,279},{62,70}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{2,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{5,0},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{62,70}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;idle_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;idle_4.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1026,1551},{342,354}}</string>
+            		<string>{{190,279},{60,70}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{5,0},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{60,70}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;walk_4.png</key>
+            	<key>characters&#x2F;wizard&#x2F;run_4.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{1368,1551},{342,354}}</string>
+            		<string>{{250,279},{66,69}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{8,3},{80,75}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{66,69}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{80,75}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;idle_4.png</key>
+            	<key>characters&#x2F;wizard&#x2F;run_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{2042,0},{342,354}}</string>
+            		<string>{{316,279},{65,69}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{8,3},{80,75}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{65,69}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{80,75}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;walk_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;walk_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{2042,354},{342,354}}</string>
+            		<string>{{402,0},{57,69}}</string>
             		<key>spriteOffset</key>
             		<string>{0,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{5,1},{68,72}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{57,69}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{68,72}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;idle_3.png</key>
+            	<key>characters&#x2F;wizard&#x2F;walk_3.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{2042,708},{342,354}}</string>
+            		<string>{{402,69},{56,69}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{342,354}}</string>
+            		<string>{{5,1},{68,71}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{342,354}</string>
+            		<string>{56,69}</string>
 			<key>spriteSize</key>
-			<string>{342,354}</string>
+			<string>{68,71}</string>
 		</dict>
-		<key>characters&#x2F;wizard&#x2F;run_2.png</key>
+            	<key>characters&#x2F;wizard&#x2F;run_1.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
 			<key>textureRect</key>
-            		<string>{{398,1176},{398,375}}</string>
+            		<string>{{330,0},{72,67}}</string>
             		<key>spriteOffset</key>
-            		<string>{0,0}</string>
+            		<string>{1,0}</string>
             		<key>textureRotated</key>
             		<false/>
             		<key>sourceColorRect</key>
-            		<string>{{0,0},{398,375}}</string>
+            		<string>{{5,4},{80,75}}</string>
             		<key>spriteSourceSize</key>
-            		<string>{398,375}</string>
+            		<string>{72,67}</string>
 			<key>spriteSize</key>
-			<string>{398,375}</string>
+			<string>{80,75}</string>
 		</dict>
         </dict>
         <key>metadata</key>
@@ -437,7 +437,7 @@
             <key>realTextureFileName</key>
             <string>wizard.png</string>
             <key>size</key>
-            <string>{4096,4096}</string>
+            <string>{512,512}</string>
             <key>textureFileName</key>
             <string>wizard.png</string>
         </dict>

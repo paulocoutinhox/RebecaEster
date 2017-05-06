@@ -6,10 +6,9 @@ USING_NS_CC;
 Scene* StageScene::createScene()
 {
     auto scene = Scene::createWithPhysics();
-    scene->getPhysicsWorld()->setGravity(Vec2(0.0f, -10.0f));
     
     auto stageLayer = StageScene::create();
-    //stageLayer->setPhysicWorld(scene->getPhysicsWorld());
+    stageLayer->setPhysicsWorld(scene->getPhysicsWorld());
     scene->addChild(stageLayer);
     stageLayer->toggleDebug();
     
@@ -33,24 +32,32 @@ bool StageScene::init()
     label->setPosition(Vec2(visibleSize.width - label->getContentSize().width - 10, origin.y + visibleSize.height - label->getContentSize().height));
     label->setAlignment(TextHAlignment::RIGHT);
     label->setAnchorPoint(Vec2(0.0f, 1.0f));
-    this->addChild(label);
+    addChild(label);
     
     auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
-    edgeBody->setContactTestBitmask(0xFFFFFFFF);
     auto edgeNode = Node::create();
     edgeNode->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
     edgeNode->setPhysicsBody(edgeBody);
-    this->addChild(edgeNode);
+    addChild(edgeNode);
     
+    /*
     auto bottomBody = PhysicsBody::createBox(Size(visibleSize.width, 20));
     bottomBody->setDynamic(false);
-    bottomBody->setContactTestBitmask(0xFFFFFFFF);
     auto bottomNode = Node::create();
     bottomNode->setPosition(Point(visibleSize.width/2, 50));
     bottomNode->setPhysicsBody(bottomBody);
     this->addChild(bottomNode);
+     */
     
-    this->scheduleUpdate();
+    /*
+    auto physicsBodyTest = PhysicsBody::createBox(Size(40, 40));
+    auto physicsBodyTestNode = Sprite::create("CloseNormal.png");
+    physicsBodyTestNode->addComponent(physicsBodyTest);
+    addChild(physicsBodyTestNode);
+    physicsBodyTestNode->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
+     */
+    
+    scheduleUpdate();
     
     return true;
 }
@@ -60,11 +67,11 @@ void StageScene::createPlayer()
     auto winSize = Director::getInstance()->getWinSize();
     
     player = Character::create("wizard");
-    player->showRunAnimation(true);
+    //player->showRunAnimation(true);
     player->getSprite()->setPosition(Vec2(winSize.width/2, winSize.height/2));
-    player->getSprite()->setScale(0.5f);
+    //player->getSprite()->setScale(0.5f);
     
-    this->addChild(player->getSprite());
+    addChild(player->getSprite());
 }
 
 void StageScene::createBackgroundWithAnimation()
@@ -97,4 +104,9 @@ void StageScene::toggleDebug()
 {
     debugDraw = !debugDraw;
     getScene()->getPhysicsWorld()->setDebugDrawMask(debugDraw ? PhysicsWorld::DEBUGDRAW_ALL : PhysicsWorld::DEBUGDRAW_NONE);
+}
+
+void StageScene::setPhysicsWorld(PhysicsWorld *physicsWorld)
+{
+    this->physicsWorld = physicsWorld;
 }

@@ -11,6 +11,7 @@ private:
     Character *player;
     void toggleDebug();
     bool debugDraw;
+    PhysicsWorld *physicsWorld;
     
 public:
     static cocos2d::Scene* createScene();
@@ -22,6 +23,7 @@ public:
     void createBackgroundWithAnimation();
     void createPlayer();
     void menuStartCallback(cocos2d::Ref* pSender);
+    void setPhysicsWorld(PhysicsWorld *physicsWorld);
     
     CREATE_FUNC(StageScene);
 };
