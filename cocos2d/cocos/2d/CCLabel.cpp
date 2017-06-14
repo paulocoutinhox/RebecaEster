@@ -416,7 +416,12 @@ Label::Label(TextHAlignment hAlignment /* = TextHAlignment::LEFT */,
         if (_fontAtlas && _currentLabelType == LabelType::TTF && event->getUserData() == _fontAtlas)
         {
             _fontAtlas = nullptr;
+            auto lineHeight = _lineHeight;
             this->setTTFConfig(_fontConfig);
+            if (_currentLabelType != LabelType::STRING_TEXTURE)
+            {
+                setLineHeight(lineHeight);
+            }
             for (auto&& it : _letters)
             {
                 getLetter(it.first);
@@ -584,6 +589,10 @@ void Label::setFontAtlas(FontAtlas* atlas,bool distanceFieldEnabled /* = false *
 
     if (atlas == _fontAtlas)
     {
+        if (_fontAtlas)
+        {
+            FontAtlasCache::releaseFontAtlas(_fontAtlas);
+        }
         return;
     }
 
@@ -1750,7 +1759,7 @@ Sprite* Label::getLetter(int letterIndex)
         if (_textSprite == nullptr && letterIndex < _lengthOfString)
         {
             const auto &letterInfo = _lettersInfo[letterIndex];
-            if (!letterInfo.valid)
+            if (!letterInfo.valid || letterInfo.atlasIndex<0)
             {
                 break;
             }

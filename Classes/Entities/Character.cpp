@@ -53,8 +53,9 @@ Character* Character::create(const std::string &type)
     //character->showAttackAnimation(true);
     //character->showWalkAnimation(true);
     //character->showRunAnimation(true);
+    //character->showJumpAnimation(true);
     
-    character->setState(1);
+    //character->setState(1);
     character->setDirection(2);
     
     // physics
@@ -68,72 +69,72 @@ Character* Character::create(const std::string &type)
 
 Sprite* Character::getSprite()
 {
-    return sprite;
+    return sprite->get();
 }
 
 Animate* Character::getIdleAnimate()
 {
-    return idleAnimate;
+    return idleAnimate->get();
 }
 
 Animate* Character::getWalkAnimate()
 {
-    return walkAnimate;
+    return walkAnimate->get();
 }
 
 Animate* Character::getRunAnimate()
 {
-    return runAnimate;
+    return runAnimate->get();
 }
 
 Animate* Character::getAttackAnimate()
 {
-    return attackAnimate;
+    return attackAnimate->get();
 }
 
 Animate* Character::getJumpAnimate()
 {
-    return jumpAnimate;
+    return jumpAnimate->get();
 }
 
 Animate* Character::getDeadAnimate()
 {
-    return deadAnimate;
+    return deadAnimate->get();
 }
 
 void Character::setSprite(Sprite *sprite)
 {
-    this->sprite = sprite;
+    this->sprite = new RefPtr<Sprite>(sprite);
 }
 
 void Character::setIdleAnimate(Animate *animate)
 {
-    idleAnimate = animate;
+    idleAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::setWalkAnimate(Animate *animate)
 {
-    walkAnimate = animate;
+    walkAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::setRunAnimate(Animate *animate)
 {
-    runAnimate = animate;
+    runAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::setAttackAnimate(Animate *animate)
 {
-    attackAnimate = animate;
+    attackAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::setJumpAnimate(Animate *animate)
 {
-    jumpAnimate = animate;
+    jumpAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::setDeadAnimate(Animate *animate)
 {
-    deadAnimate = animate;
+    deadAnimate = new RefPtr<Animate>(animate);
 }
 
 void Character::showIdleAnimation(const bool &repeat)
@@ -143,13 +144,15 @@ void Character::showIdleAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(idleAnimate));
+        sprite->get()->runAction(RepeatForever::create(idleAnimate->get()));
     }
     else
     {
-        sprite->runAction(idleAnimate);
+        sprite->get()->runAction(idleAnimate->get());
     }
     
     state = 1;
@@ -162,13 +165,15 @@ void Character::showWalkAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(walkAnimate));
+        sprite->get()->runAction(RepeatForever::create(walkAnimate->get()));
     }
     else
     {
-        sprite->runAction(walkAnimate);
+        sprite->get()->runAction(walkAnimate->get());
     }
     
     state = 2;
@@ -181,13 +186,15 @@ void Character::showRunAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(runAnimate));
+        sprite->get()->runAction(RepeatForever::create(runAnimate->get()));
     }
     else
     {
-        sprite->runAction(runAnimate);
+        sprite->get()->runAction(runAnimate->get());
     }
     
     state = 3;
@@ -200,13 +207,15 @@ void Character::showAttackAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(attackAnimate));
+        sprite->get()->runAction(RepeatForever::create(attackAnimate->get()));
     }
     else
     {
-        sprite->runAction(attackAnimate);
+        sprite->get()->runAction(attackAnimate->get());
     }
     
     state = 4;
@@ -219,13 +228,15 @@ void Character::showJumpAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(jumpAnimate));
+        sprite->get()->runAction(RepeatForever::create(jumpAnimate->get()));
     }
     else
     {
-        sprite->runAction(jumpAnimate);
+        sprite->get()->runAction(jumpAnimate->get());
     }
     
     state = 5;
@@ -238,13 +249,15 @@ void Character::showDeadAnimation(const bool &repeat)
         return;
     }
     
+    sprite->get()->stopAllActions();
+    
     if (repeat)
     {
-        sprite->runAction(RepeatForever::create(deadAnimate));
+        sprite->get()->runAction(RepeatForever::create(deadAnimate->get()));
     }
     else
     {
-        sprite->runAction(deadAnimate);
+        sprite->get()->runAction(deadAnimate->get());
     }
     
     state = 6;
@@ -252,12 +265,12 @@ void Character::showDeadAnimation(const bool &repeat)
 
 PhysicsBody* Character::getPhysicsBody()
 {
-    return physicsBody;
+    return physicsBody->get();
 }
 
 void Character::setPhysicsBody(PhysicsBody *physicsBody)
 {
-    this->physicsBody = physicsBody;
+    this->physicsBody = new RefPtr<PhysicsBody>(physicsBody);
 }
 
 void Character::updateVelocity(Point velocity)
@@ -291,9 +304,11 @@ void Character::move(Point velocity)
 
 void Character::actionButtonPressed(int button)
 {
+    cocos2d::log("[Character : actionButtonPressed]");
+    
     if (button == 1)
     {
-        getPhysicsBody()->applyImpulse(Vec2(0.0f, 25.0f));
+        getPhysicsBody()->applyImpulse(Vec2(0.0f, 100.0f));
         showJumpAnimation(false);
     }
 }
@@ -302,7 +317,7 @@ void Character::changeDirection(int direction)
 {
     if (this->direction != direction && direction == 1)
     {
-        sprite->setFlippedX(true);
+        sprite->get()->setFlippedX(true);
         this->direction = direction;
         
         if (state == 2 || state == 3)
@@ -312,7 +327,7 @@ void Character::changeDirection(int direction)
     }
     else if (this->direction != direction && direction == 2)
     {
-        sprite->setFlippedX(false);
+        sprite->get()->setFlippedX(false);
         this->direction = direction;
      
         if (state == 2 || state == 3)

@@ -43,15 +43,15 @@ public:
     void stopMoving();
     
 private:
-    Animate *idleAnimate;
-    Animate *walkAnimate;
-    Animate *runAnimate;
-    Animate *attackAnimate;
-    Animate *jumpAnimate;
-    Animate *deadAnimate;
+    RefPtr<Animate> *idleAnimate;
+    RefPtr<Animate> *walkAnimate;
+    RefPtr<Animate> *runAnimate;
+    RefPtr<Animate> *attackAnimate;
+    RefPtr<Animate> *jumpAnimate;
+    RefPtr<Animate> *deadAnimate;
     
-    Sprite *sprite;
-    PhysicsBody *physicsBody;
+    RefPtr<Sprite> *sprite;
+    RefPtr<PhysicsBody> *physicsBody;
     
     int direction;
     int state;
